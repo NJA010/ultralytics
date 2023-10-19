@@ -585,12 +585,12 @@ class LetterBox:
         top, bottom = int(round(dh - 0.1)) if self.center else 0, int(round(dh + 0.1))
         left, right = int(round(dw - 0.1)) if self.center else 0, int(round(dw + 0.1))
         # hardcode to equalize padding in Validator and Predictor :( 
-	top = 19
-	bottom = 20
-	left = 16
-	right = 16
-	img = cv2.copyMakeBorder(img, top, bottom, left, right, cv2.BORDER_CONSTANT,
-                                 value=(114, 114, 114))  # add border
+        top = 19
+        bottom = 20
+        left = 16
+        right = 16
+        img = cv2.copyMakeBorder(img, top, bottom, left, right, cv2.BORDER_CONSTANT,
+                                     value=(114, 114, 114))  # add border
 
         if len(labels):
             labels = self._update_labels(labels, ratio, dw, dh)
